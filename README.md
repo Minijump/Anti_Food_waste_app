@@ -1,5 +1,5 @@
 # Anti Food waste app
-[Jumpertz Sacha](www.linkedin.com/in/jumpertz-sacha)
+[__Jumpertz Sacha__](https://www.linkedin.com/in/jumpertz-sacha)
 
 Food waste is a critical global problem, with staggering statistics revealing that approximately __one-third__ (_40%_ in America) of all food produced for human consumption is wasted every year. This alarming figure not only contributes to the exacerbation of famines and hunger worldwide but also has a severe ecological impact.
 
