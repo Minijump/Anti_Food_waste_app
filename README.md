@@ -1,4 +1,5 @@
 # Anti Food waste app
+[Jumpertz Sacha](www.linkedin.com/in/jumpertz-sacha)
 
 Food waste is a critical global problem, with staggering statistics revealing that approximately __one-third__ (_40%_ in America) of all food produced for human consumption is wasted every year. This alarming figure not only contributes to the exacerbation of famines and hunger worldwide but also has a severe ecological impact.
 
@@ -12,3 +13,26 @@ The goal of this repo is to build an 'app' that will reduce the food waste comin
 The app will be connected to the supermarket's database. It will thus have access to the products that are close to expriration date but also to the taste of the users. The mission of tha app will be to suggest to each users a recipe that maximize the number of 'saved' products and the 'happiness' of the user.
 
 ![app scema](Images/App_schema.png)
+
+## Execution steps
+
+* Create the databases (__IN PROGRESS__)
+* Create a recommendation system (__TODO__)
+* Build the app (__TODO__)
+
+### Create tha databases
+IN PROGRESS: In this part I will create the databases that the app uses.
+
+### Recommendation system
+TODO
+
+### Build the app
+TODO
+
+## Usage
+TODO (installations, build the db, update it, use the app)
+
+## Limits
+TODO 
+
+
