@@ -12,7 +12,9 @@ The goal of this repo is to build an 'app' that will reduce the food waste comin
 
 The app will be connected to the supermarket's database. It will thus have access to the products that are close to expriration date but also to the taste of the users. The mission of tha app will be to suggest to each users a recipe that maximize the number of 'saved' products and the 'happiness' of the user.
 
-![app scema](Images/App_schema.png)
+<div style="text-align: center;">
+  <img src="Images/App_schema.png" alt="app schema" width="600" height="450">
+</div>
 
 ## Execution steps
 
