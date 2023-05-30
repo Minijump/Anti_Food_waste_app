@@ -18,16 +18,15 @@ The app will be connected to the supermarket's database. It will thus have acces
 
 ## Execution steps
 
-* Create the databases (__IN PROGRESS__)
-* Create a recommendation system (__TODO__)
+* Create the databases 
+* Create a recommendation system (__INPROGRESS__)
 * Build the app (__TODO__)
 
 ### Create tha databases
-IN PROGRESS(finish readme)
 In this part I created the database I will use to do my app. The recepies come from an API, and data like users profile, command history,... had to be created from scratch. I tried to create the most coherent database even though some 'concessions' had to be done. You can find a more precise description of the database and all the codes used to create it into the folder [Build_db](./Build_db).
 
 ### Recommendation system
-TODO
+__INPROGRESS__
 
 ### Build the app
 TODO
