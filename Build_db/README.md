@@ -3,7 +3,7 @@
 This folder is dedicated to creating the database used by the app. This database is composed of 5 tables (that you can see below). 
 
 <div style="text-align: center;">
-  <img src="../Images/App_schema.png" alt="db_schema" width="600" height="450">
+  <img src="../Images/db_schema.png" alt="db_schema" width="600" height="450">
 </div>
 
 No connections are done between those tables for practical reasons that are explained in the notebooks. The database was build in 5 steps:
@@ -25,7 +25,7 @@ The stock table was also generated randomly. However I made sure that there is l
 
 ### Create table Commands
 To create the commands history I used the favourite recipe of each client, a random factor, and tf-idf on the recipe's summary and instructions. In other word each client was 'exposed' to each recipes, the
-more this recipe was similar to his favourite one the more the command had a chance to be added.
+more this recipe was similar to his favourite one the more the command had a chance to be added. [create_commands](create_commands.ipynb)
 
 In the end I had about 1000 recipes, 1235 ingredients, 10000 users and 600000 commands. These numbers can change due to random factors
 
