@@ -19,17 +19,18 @@ The app will be connected to the supermarket's database. It will thus have acces
 ## Execution steps
 
 * Create the databases 
-* Create a recommendation system (__INPROGRESS__)
-* Build the app (__TODO__)
+* Create a recommendation system 
+* Build the app (__INPROGRESS__)
 
-### Create tha databases
-In this part I created the database I will use to do my app. The recepies come from an API, and data like users profile, command history,... had to be created from scratch. I tried to create the most coherent database even though some 'concessions' had to be done. You can find a more precise description of the database and all the codes used to create it into the folder [Build_db](./Build_db).
+### Create the databases
+In this part I created the database I will use to do my app. The recipes come from an API, and data like users profile, command history,... had to be created from scratch. I tried to create the most coherent database even though some 'concessions' had to be done. You can find a more precise description of the database and all the codes used to create it into the folder [Build_db](./Build_db).
 
 ### Recommendation system
-__INPROGRESS__
+In the file [recommendation_system](recommendation_system.ipynb) you will be able to find a notebook that explains how the recommendation system is working. In summary it will maximize the number of saved prodcts and the 'happiness' of the user. This file won't be used afterward as such (as it is a notebook). Still you will find there the codes that will be used in the app.
 
 ### Build the app
-TODO
+__IN PROGRESS__
+The app will implement the recommendation system into python files, it will also allow to change the content of the database (if a new comand is added), and it will implement a user interface done with streamlit.
 
 ## Usage
 TODO (installations, build the db, update it, use the app)
