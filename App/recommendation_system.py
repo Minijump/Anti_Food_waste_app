@@ -43,6 +43,8 @@ query = "CREATE INDEX idx_recepie_id ON id_liked_recipe (recepie_id);"
 conn.execute(query)
 conn.commit()
 
+conn.close()
+
 
 
 # expiration coefficient---------------------------------------------------------------------------------------------------
@@ -65,7 +67,9 @@ def expi_coef(ingr_ids: list) -> int:
     return the 'coefficient' of saved product
     coef = sum(urgent_column) for each ingredients
     """
-    global conn
+    #global conn
+    conn = sqlite3.connect('../Data/Supermarket.db')
+
 
     #ask to the view the sum of expiration paramaters (for each ingredients)
     list_ingr_ids = '(' + str(ingr_ids)[1:-1] + ')' #make it a string
@@ -73,6 +77,8 @@ def expi_coef(ingr_ids: list) -> int:
              "FROM  ingredients_close_expiration " 
              f"WHERE ingredient_id IN {list_ingr_ids}")
     coef = conn.execute(query).fetchone()
+
+    conn.close()
 
     return coef[0] if coef is not None else 0
 
@@ -83,7 +89,9 @@ def a_priori(n_people, recipe_id):
     """ 
     return the a priori probability 
     """
-    global conn
+    #global conn
+    conn = sqlite3.connect('../Data/Supermarket.db')
+
 
     query = ("SELECT number_id " 
             "FROM  id_liked_recipe "
@@ -93,6 +101,8 @@ def a_priori(n_people, recipe_id):
 
     p_like_tested = n_like_tested / n_people
 
+    conn.close()
+
     return p_like_tested
 
 
@@ -101,7 +111,9 @@ def likelihood(recipe_id, user_recipes):
     return the likelihood probability 
     """
 
-    global conn
+    #global conn
+    conn = sqlite3.connect('../Data/Supermarket.db')
+
     likelihood = 1
 
     query = ("SELECT number_id, user_ids "
@@ -125,6 +137,8 @@ def likelihood(recipe_id, user_recipes):
 
         likelihood *= (1 + liked_both) / (liked_recipe_i)
 
+    conn.close()
+
     return likelihood
 
 
@@ -132,11 +146,16 @@ def taste_coef(user_recipes: list, recipe_id: int) ->float:
     """  
     return a probability that the user like the recipe of id 'recipe_id'
     """
-    global conn, n_people
+    #global conn, n_people
+    global n_people
+    conn = sqlite3.connect('../Data/Supermarket.db')
+
 
     #compute the 2 coeficients
     p_a_priori = a_priori(n_people, recipe_id) 
     likely = likelihood(recipe_id, user_recipes) 
+
+    conn.close()
     
     return p_a_priori * likely
 
@@ -147,7 +166,9 @@ def get_recommendation(id_user):
     for each recipe and for user id = 'id_user'.
     """
     #use the global variables defined earlier
-    global conn
+    #global conn
+    conn = sqlite3.connect('../Data/Supermarket.db')
+
     global df_recipe
 
     #extract ingredients
@@ -184,7 +205,6 @@ if __name__ == "__main__":
     else:
         id = sys.argv[1]
         get_recommendation(id)
-
         recommendation = df_recipe[df_recipe["suggestion_coef"] == df_recipe["suggestion_coef"].max()]
         print(recommendation)  
 
