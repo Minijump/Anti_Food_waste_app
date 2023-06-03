@@ -2,6 +2,7 @@ import sqlite3
 import pandas as pd
 import ast
 import sys
+import random
 
 #connect to the db
 conn = sqlite3.connect('../Data/Supermarket.db')
@@ -158,6 +159,8 @@ def get_recommendation(id_user):
             f"WHERE user_id = {id_user}")
     response = conn.execute(query).fetchall()
     user_recipes = [row[0] for row in response]
+    if len(user_recipes) > 15: #takes only 15 results, else it would be too long
+        user_recipes = random.sample(user_recipes, 15)
 
     #compute the 2 coefficients
     df_recipe['saved_coef'] = df_recipe['ingredients'].apply(expi_coef)   #coefficient that compute the number of product saved from expiration
