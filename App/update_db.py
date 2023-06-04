@@ -129,7 +129,6 @@ def reset_commands():
     #df['description']= df['description'].apply(pre_process_text)
     df['description']= df['description'].apply(lambda x: pre_process_text(stop_words, punctuation, x))
 
-
     #create tf-idf matrix
     description_list = df['description'].tolist()
     tfidf_vectorizer = TfidfVectorizer()
