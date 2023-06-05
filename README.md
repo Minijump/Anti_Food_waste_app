@@ -20,7 +20,7 @@ The app will be connected to the supermarket's database. It will thus have acces
 
 * Create the databases 
 * Create a recommendation system 
-* Build the app (__INPROGRESS__)
+* Build the app 
 
 ### Create the databases
 In this part I created the database I will use to do my app. The recipes come from an API, and data like users profile, command history,... had to be created from scratch. I tried to create the most coherent database even though some 'concessions' had to be done. You can find a more precise description of the database and all the codes used to create it into the folder [Build_db](./Build_db).
@@ -29,13 +29,32 @@ In this part I created the database I will use to do my app. The recipes come fr
 In the file [recommendation_system](recommendation_system.ipynb) you will be able to find a notebook that explains how the recommendation system is working. In summary it will maximize the number of saved prodcts and the 'happiness' of the user. This file won't be used afterward as such (as it is a notebook). Still you will find there the codes that will be used in the app.
 
 ### Build the app
-__IN PROGRESS__
-The app will implement the recommendation system into python files, it will also allow to change the content of the database (if a new comand is added), and it will implement a user interface done with streamlit.
+The last step consisted into building the app. In order to do that, I had to write the recommendation system into a python file and to build a user interface with streamlit. I also added a file to update with functions to reset the database or to add data to tables. You can find those files into the folder [App](./App).
 
 ## Usage
-TODO (installations, build the db, update it, use the app)
+### set up the database
+To be able to use the app, you have at first to set up the database. To do that you have to run the notebook in the folder Build_db. The order inwhich you have to run them is explicited into the readme of the folder.
+
+### use the app
+Then you are able to use the app. You can see below the interface of the app. To have the suggestions you have to enter the id of the user (1-10000) and then click on _Get recommendation_.
+
+<div style="text-align: center;">
+  <img src="Images/App_1.png" alt="app 1" width="600" height="450">
+</div>
+
+After a few moment, you will be able to scroll through 3 suggestions of recipes, seeing a picture, their descriptions, a link to the recipe,...
+
+<div style="text-align: center;">
+  <img src="Images/App_2.png" alt="app 2" width="600" height="450">
+</div>
+
+At the bottom of the page you will have 2 others actions. You can 'buy' a recipe, this will automatically add the command into the Commands table. You can also push on Reset Data, this will reset the tables Customers, Commands ans stocks.
+
+<div style="text-align: center;">
+  <img src="Images/App_3.png" alt="app 3" width="600" height="450">
+</div>
 
 ## Limits
-TODO 
+To have a more complete project, the ideal would be to have better data. This app to not take into account quantities of the recepies neither the different kind of food. Also the quality of the app could be easily increased, with some UX or more interaction with the databases.
 
 
