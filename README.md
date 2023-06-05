@@ -5,7 +5,7 @@ Food waste is a critical global problem, with staggering statistics revealing th
 
 The ecological impact of food waste cannot be underestimated. When food is discarded and sent to landfills, it decomposes and releases GHG, particularly methane, which is a potent contributor to climate change (Up to _10%_ of global greenhouse gases comes from food that is produced, but not eaten. Source: _United Nations Environment Program (UNEP) (2021). Food Waste Index Report 2021_). 
 
-Additionally, the production, transportation, and disposal of wasted food require vast amounts of energy, water, and other valuable resources. I could give a bunch of impressive numbers to demonstrate how food waste is harmfull, but the conclusion will still remaisn the same, fighting food waste should be a priority.
+Additionally, the production, transportation, and disposal of wasted food require vast amounts of energy, water, and other valuable resources. I could give a bunch of impressive numbers to demonstrate how food waste is harmfull, but the conclusion will still remain the same, fighting food waste should be a priority.
 
 ## The app
 The goal of this repo is to build an 'app' that will reduce the food waste coming from supermarket. Supermarket are not the biggest contributors to food waste, but still, when their products come to their expiration date they have no other choice than throwing the away. 
@@ -33,7 +33,7 @@ The last step consisted into building the app. In order to do that, I had to wri
 
 ## Usage
 ### set up the database
-To be able to use the app, you have at first to set up the database. To do that you have to run the notebook in the folder Build_db. The order inwhich you have to run them is explicited into the readme of the folder.
+To be able to use the app, you have at first to set up the database. To do that you have to run the notebook in the folder Build_db. The order in which you have to run them is explicited into the readme of the folder.
 
 ### use the app
 Then you are able to use the app. You can see below the interface of the app. To have the suggestions you have to enter the id of the user (1-10000) and then click on _Get recommendation_.
@@ -55,6 +55,6 @@ At the bottom of the page you will have 2 others actions. You can 'buy' a recipe
 </div>
 
 ## Limits
-To have a more complete project, the ideal would be to have better data. This app to not take into account quantities of the recepies neither the different kind of food. Also the quality of the app could be easily increased, with some UX or more interaction with the databases.
+To have a more complete project, the ideal would be to have better data. This app do not take into account quantities of the recepies neither the different kind of food. Also the quality of the app could be easily increased with some UX and more interaction with the databases.
 
 
