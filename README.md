@@ -55,6 +55,7 @@ At the bottom of the page you will have 2 others actions. You can 'buy' a recipe
 </div>
 
 ## Limits
-To have a more complete project, the ideal would be to have better data. This app do not take into account quantities of the recepies neither the different kind of food. Also the quality of the app could be easily increased with some UX and more interaction with the databases.
+To have a more complete project, the ideal would be to have better data. This app do not take into account quantities of the recepies neither the different kind of food. 
+Also the quality of the app could be easily increased with some UX, more interaction with the databases and faster SQL querries.
 
 
